@@ -2,7 +2,7 @@
 ===
 Brine is a Salt Formula initializer. It allows you to express what the formula should do in the simple style and syntax of a `Brinefile`. Once you have your Brinefile filled out, you can simply run `brine.py` from within the same directory as the `Brinefile` and Brine will create all the files and directories for a "role" or "element".
 
-Benafits of Brine
+Benefits of Brine
 ---
 + **Lower barrier to entry**   - very little knowledge of Salt's syntax or even Salt itself is required to get started making great-looking Salt Formulas.
 + **Standards and consistent** - Formula style, creation and naming of state-blocks are all formulaic and standard. 
