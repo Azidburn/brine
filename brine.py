@@ -46,7 +46,7 @@ TEMPLATES = {
         ${state}_${name}_file:
           file.managed:
             - name: ${name}
-            - source: salt://${path}/files${name}.jinja
+            - source: salt://{{ slspath }}/files${name}.jinja
             - template: jinja
             - makedirs: True
             - mode: '${mode}'
