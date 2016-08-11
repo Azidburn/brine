@@ -40,7 +40,7 @@ TEMPLATES = {
         ##    ${doc_link}
         """),
 
-    'map_import': Template("""{% from "${jinja_import_path}" import ${jinja_import_name} with context %}\n\n"""),
+    'map_import': Template("""{% from slspath + "${jinja_import_path}" import ${jinja_import_name} with context %}\n\n"""),
 
     'file_managed': Template("""
         ${state}_${name}_file:
@@ -390,7 +390,7 @@ class Brine(object):
 
     def section_versions_map_import(self):
         if self.has_package_with_version():
-            jinja_import_path = os.path.join(self.path, self.versions_map_file)
+            jinja_import_path = os.path.join(self.maps_dir, "/", self.versions_map_file)
             jinja_import_name = os.path.basename(self.versions_map_file).split(".")[0]
             return TEMPLATES['map_import'].render(jinja_import_path=jinja_import_path, jinja_import_name=jinja_import_name)
         return None
