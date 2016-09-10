@@ -93,6 +93,15 @@ Section | Description | Prepend Modifiers | Append Modifiers
 `%scripts`    | Provide a list of scripts that should be executed||
 `%cronjobs`   |provide a list of cronjobs to be configured. Put these in as normal crontab entries. It will get translated to native `cron.present` state.||
 
+Notes
+===
+
+%files
+/etc/hosts
+
+generates the requirement for a template file at
+{{ slspath }}/files/etc/hosts.jinja
+
 
 Setting up Brine
 ===
